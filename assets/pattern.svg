@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+<rect width="420" height="420" fill="#f4e5c7"/>
+<g fill="none" stroke="#c79b3b" stroke-opacity=".16" stroke-width="1">
+  <circle cx="210" cy="210" r="140"/>
+  <circle cx="210" cy="210" r="105"/>
+  <circle cx="210" cy="210" r="70"/>
+  <path d="M210 20V400M20 210H400M75 75L345 345M345 75L75 345"/>
+  <g transform="translate(210 210)">
+    <ellipse cy="-112" rx="14" ry="42"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(30)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(60)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(90)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(120)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(150)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(180)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(210)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(240)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(270)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(300)"/>
+    <ellipse cy="-112" rx="14" ry="42" transform="rotate(330)"/>
+  </g>
+</g>
+</svg>

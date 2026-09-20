@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6d0f19">
+  <meta name="description" content="Wedding invitation for [GROOM_NAME] & [BRIDE_NAME]">
+  <title>Akhil & Bhargavi | Wedding Invitation</title>
+
+  <!-- Traditional Indian / Telugu typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       CUSTOMIZATION GUIDE
+       Search for [PLACEHOLDER] and replace each value.
+       Photos go in /assets/
+       Music goes in /assets/wedding-music.mp3
+       Countdown date is in script.js
+       ========================================================= -->
+
+  <div id="preloader" class="preloader">
+    <canvas id="mandalaCanvas" class="mandala-canvas"></canvas>
+    <div class="preloader-glow"></div>
+
+    <div class="temple-gate">
+      <div class="bell bell-left">🔔</div>
+      <div class="bell bell-right">🔔</div>
+
+      <div class="ganesha-symbol">ॐ</div>
+      <p class="sanskrit">॥ श्री गणेशाय नमः ॥</p>
+
+      <div class="gate-line"></div>
+
+      <p class="preloader-kicker">A SACRED BEGINNING</p>
+      <h1>Akhil</h1>
+      <div class="gold-amp">weds</div>
+      <h1>Bhargavi</h1>
+
+      <p class="preloader-date">15-11-2026</p>
+
+      <button id="enterInvitation" class="gold-button">
+        <span>🪷</span> Enter Invitation
+      </button>
+
+      <p class="tap-note">• Tap to open • </p>
+    </div>
+  </div>
+
+  <div id="petalLayer" class="petal-layer" aria-hidden="true"></div>
+
+  <header class="hero" id="home">
+    <div class="hero-bg parallax-bg"></div>
+    <div class="hero-shade"></div>
+
+    <button id="musicToggle" class="floating-music" aria-label="Play wedding music">
+      <span class="music-icon">♫</span>
+      <span class="music-bars"><i></i><i></i><i></i><i></i></span>
+    </button>
+
+    <button id="languageToggle" class="language-toggle" aria-label="Switch language">
+      EN <span>•</span> తెలుగు
+    </button>
+
+    <div class="hero-decor top-decor">✦ ❈ ✦</div>
+
+    <div class="hero-content reveal">
+      <p class="sanskrit">॥ श्री गणेशाय नमः ॥</p>
+      <p class="hero-kicker">WITH THE BLESSINGS OF OUR FAMILIES</p>
+
+      <div class="ornamental-rule"><span>❧</span><i></i><span>❧</span></div>
+
+      <p class="hero-script">We invite you to witness</p>
+      <h1>Akhil</h1>
+      <div class="hero-ampersand">&</div>
+      <h1>Bhargavi</h1>
+
+      <p class="hero-subtitle">as they begin their journey together</p>
+      <p class="hero-date">15-11-26 · Hyderabad</p>
+
+      <a href="#welcome" class="scroll-cue">
+        <span>Scroll to explore</span>
+        <b>↓</b>
+      </a>
+    </div>
+
+    <div class="hero-decor bottom-decor">✦ ❈ ✦</div>
+  </header>
+
+  <main>
+    <!-- WELCOME -->
+    <section class="traditional-section welcome section" id="welcome">
+      <div class="mandala-watermark">ॐ</div>
+
+      <div class="section-inner reveal">
+        <p class="section-kicker">MANGALAM</p>
+        <h2>Two hearts.<br><em>One sacred journey.</em></h2>
+
+        <div class="ornamental-rule dark">
+          <span>❧</span><i></i><span>❧</span>
+        </div>
+
+        <p class="lead">
+          [WELCOME_MESSAGE]
+        </p>
+
+        <p class="telugu">
+          [TELUGU_WELCOME_MESSAGE]
+        </p>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section section">
+      <div class="section-inner reveal">
+        <div class="lamp-icon">🪔</div>
+        <p class="section-kicker">THE AUSPICIOUS DAY</p>
+        <h2>[WEDDING_DATE]</h2>
+        <p class="muted">Our celebration begins in</p>
+
+        <div class="countdown">
+          <div class="count-box"><strong id="days">00</strong><span>Days</span></div>
+          <div class="count-box"><strong id="hours">00</strong><span>Hours</span></div>
+          <div class="count-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+          <div class="count-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+        </div>
+
+        <p id="countdownMessage" class="countdown-message"></p>
+        <button id="calendarButton" class="outline-button">🗓 Add to Calendar</button>
+      </div>
+    </section>
+
+    <!-- COUPLE -->
+    <section class="couple-section section">
+      <div class="section-inner couple-layout">
+        <div class="couple-image-wrap reveal parallax-frame">
+          <div class="corner-ornament">❈</div>
+          <img class="parallax-image" src="assets/couple.svg" alt="[GROOM_NAME] and [BRIDE_NAME]">
+          <div class="image-caption">[COUPLE_PHOTO_CAPTION]</div>
+        </div>
+
+        <div class="couple-copy reveal">
+          <p class="section-kicker">THE COUPLE</p>
+          <h2>[GROOM_NAME]<br><span>&</span><br>[BRIDE_NAME]</h2>
+
+          <div class="ornamental-rule dark left">
+            <span>❧</span><i></i><span>❧</span>
+          </div>
+
+          <p>[COUPLE_MESSAGE]</p>
+          <p class="telugu">[TELUGU_COUPLE_MESSAGE]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section section">
+      <div class="section-inner">
+        <div class="section-title reveal">
+          <p class="section-kicker">PREMA KATHA</p>
+          <h2>Our story</h2>
+          <p>[STORY_INTRO]</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot">01</div>
+            <div class="timeline-image">
+              <img src="assets/story-1.svg" alt="[STORY_IMAGE_1_ALT]">
+            </div>
+            <div class="timeline-copy">
+              <span>[STORY_DATE_1]</span>
+              <h3>[STORY_TITLE_1]</h3>
+              <p>[STORY_TEXT_1]</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reverse reveal">
+            <div class="timeline-dot">02</div>
+            <div class="timeline-image">
+              <img src="assets/story-2.svg" alt="[STORY_IMAGE_2_ALT]">
+            </div>
+            <div class="timeline-copy">
+              <span>[STORY_DATE_2]</span>
+              <h3>[STORY_TITLE_2]</h3>
+              <p>[STORY_TEXT_2]</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot">03</div>
+            <div class="timeline-image">
+              <img src="assets/story-3.svg" alt="[STORY_IMAGE_3_ALT]">
+            </div>
+            <div class="timeline-copy">
+              <span>[STORY_DATE_3]</span>
+              <h3>[STORY_TITLE_3]</h3>
+              <p>[STORY_TEXT_3]</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events-section section" id="events">
+      <div class="section-inner">
+        <div class="section-title reveal">
+          <p class="section-kicker">SHUBHA KARYAKRAMALU</p>
+          <h2>Wedding celebrations</h2>
+          <p>[EVENTS_INTRO]</p>
+        </div>
+
+        <div class="event-grid">
+          <article class="event-card reveal">
+            <div class="event-icon">🌿</div>
+            <span class="event-number">01</span>
+            <p class="event-type">[EVENT_TYPE_1]</p>
+            <h3>[EVENT_NAME_1]</h3>
+            <div class="event-rule"></div>
+            <p class="event-date">[EVENT_DATE_1]</p>
+            <p class="event-time">[EVENT_TIME_1]</p>
+            <p>[EVENT_DESCRIPTION_1]</p>
+            <div class="event-venue">
+              <strong>[VENUE_1]</strong>
+              <span>[VENUE_ADDRESS_1]</span>
+            </div>
+            <a href="[MAPS_URL_1]" class="map-link" target="_blank" rel="noopener">📍 View Map</a>
+          </article>
+
+          <article class="event-card featured reveal">
+            <div class="event-icon">🪔</div>
+            <span class="event-number">02</span>
+            <p class="event-type">[EVENT_TYPE_2]</p>
+            <h3>[EVENT_NAME_2]</h3>
+            <div class="event-rule"></div>
+            <p class="event-date">[EVENT_DATE_2]</p>
+            <p class="event-time">[EVENT_TIME_2]</p>
+            <p>[EVENT_DESCRIPTION_2]</p>
+            <div class="event-venue">
+              <strong>[VENUE_2]</strong>
+              <span>[VENUE_ADDRESS_2]</span>
+            </div>
+            <a href="[MAPS_URL_2]" class="map-link" target="_blank" rel="noopener">📍 View Map</a>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-icon">🌸</div>
+            <span class="event-number">03</span>
+            <p class="event-type">[EVENT_TYPE_3]</p>
+            <h3>[EVENT_NAME_3]</h3>
+            <div class="event-rule"></div>
+            <p class="event-date">[EVENT_DATE_3]</p>
+            <p class="event-time">[EVENT_TIME_3]</p>
+            <p>[EVENT_DESCRIPTION_3]</p>
+            <div class="event-venue">
+              <strong>[VENUE_3]</strong>
+              <span>[VENUE_ADDRESS_3]</span>
+            </div>
+            <a href="[MAPS_URL_3]" class="map-link" target="_blank" rel="noopener">📍 View Map</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section section">
+      <div class="section-inner">
+        <div class="section-title reveal">
+          <p class="section-kicker">SMRUTHULU</p>
+          <h2>Our memories</h2>
+          <p>[GALLERY_INTRO]</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item item-large reveal"><img src="assets/gallery-1.svg" alt="[GALLERY_1_ALT]"></figure>
+          <figure class="gallery-item reveal"><img src="assets/gallery-2.svg" alt="[GALLERY_2_ALT]"></figure>
+          <figure class="gallery-item reveal"><img src="assets/gallery-3.svg" alt="[GALLERY_3_ALT]"></figure>
+          <figure class="gallery-item item-wide reveal"><img src="assets/gallery-4.svg" alt="[GALLERY_4_ALT]"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILIES -->
+    <section class="families-section section">
+      <div class="section-inner reveal">
+        <div class="section-title">
+          <p class="section-kicker">WITH THE BLESSINGS OF</p>
+          <h2>Our families</h2>
+        </div>
+
+        <div class="family-grid">
+          <div class="family-card">
+            <div class="family-symbol">🪷</div>
+            <p class="family-label">[GROOM_SIDE_LABEL]</p>
+            <h3>[GROOM_PARENT_1]<br>& [GROOM_PARENT_2]</h3>
+            <p>[GROOM_FAMILY_MESSAGE]</p>
+            <small>[GROOM_FAMILY_ADDRESS]</small>
+          </div>
+
+          <div class="family-divider">ॐ</div>
+
+          <div class="family-card">
+            <div class="family-symbol">🪷</div>
+            <p class="family-label">[BRIDE_SIDE_LABEL]</p>
+            <h3>[BRIDE_PARENT_1]<br>& [BRIDE_PARENT_2]</h3>
+            <p>[BRIDE_FAMILY_MESSAGE]</p>
+            <small>[BRIDE_FAMILY_ADDRESS]</small>
+          </div>
+        </div>
+
+        <div class="family-footer">Two families · One bond · A lifetime of love</div>
+      </div>
+    </section>
+
+    <!-- TELUGU -->
+    <section class="telugu-section section" id="telugu">
+      <div class="telugu-card reveal">
+        <div class="telugu-top">ॐ</div>
+        <p class="telugu-sanskrit">॥ శ్రీ గణేశాయ నమః ॥</p>
+        <p class="section-kicker">శుభలేఖ</p>
+        <h2 class="telugu-heading">[TELUGU_HEADING]</h2>
+        <div class="telugu-rule">❈ ❈ ❈</div>
+        <p class="telugu-main">[TELUGU_INVITATION_TEXT]</p>
+        <h3>[GROOM_NAME]</h3>
+        <span>&</span>
+        <h3>[BRIDE_NAME]</h3>
+        <p class="telugu-main">[TELUGU_CLOSING_TEXT]</p>
+      </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="venue-section section">
+      <div class="section-inner venue-layout">
+        <div class="venue-copy reveal">
+          <p class="section-kicker">KALYANA MANDAPAM</p>
+          <h2>[MAIN_VENUE_NAME]</h2>
+          <p>[MAIN_VENUE_ADDRESS]</p>
+          <p class="muted">[VENUE_EXTRA_INFORMATION]</p>
+
+          <div class="venue-actions">
+            <a href="[MAIN_MAPS_URL]" target="_blank" rel="noopener" class="gold-button">📍 Open Google Maps</a>
+            <button id="copyAddress" class="outline-button">Copy Address</button>
+          </div>
+          <input id="venueAddress" type="hidden" value="[MAIN_VENUE_ADDRESS]">
+        </div>
+
+        <div class="venue-art reveal parallax-frame">
+          <img class="parallax-image" src="assets/venue.svg" alt="[VENUE_IMAGE_ALT]">
+          <div class="venue-stamp">ॐ</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section section">
+      <div class="section-inner rsvp-card reveal">
+        <div class="rsvp-mandala">❈</div>
+        <p class="section-kicker">MANGALAM</p>
+        <h2>[RSVP_HEADING]</h2>
+        <p>[RSVP_MESSAGE]</p>
+        <a href="[RSVP_URL]" class="gold-button">🙏 RSVP / Contact</a>
+        <p class="rsvp-note">[RSVP_CONTACT_TEXT]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-mandala">ॐ</div>
+    <p class="sanskrit">॥ सर्वे भवन्तु सुखिनः ॥</p>
+    <h2>[GROOM_NAME] <span>&</span> [BRIDE_NAME]</h2>
+    <p>[WEDDING_DATE]</p>
+    <div class="footer-rule">❈ ✦ ❈</div>
+    <p class="footer-note">[FOOTER_MESSAGE]</p>
+  </footer>
+
+  <audio id="weddingMusic" loop preload="metadata">
+    <source src="assets/wedding-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
