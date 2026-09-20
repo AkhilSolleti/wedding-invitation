@@ -9,7 +9,7 @@
    const COUNTDOWN_DATE = "2027-02-14T10:30:00";
    ========================================================== */
 
-const COUNTDOWN_DATE = "2027-11-15T10:00:00";
+const COUNTDOWN_DATE = "2026-11-15T10:00:00";
 
 /* ---------- Opening ---------- */
 
@@ -38,7 +38,7 @@ async function startMusic() {
     let volume = 0;
     const fade = setInterval(() => {
       volume += 0.025;
-      music.volume = Math.min(volume, 0.55);
+      music.volume = Math.min(volume, 0.25);
 
       if (volume >= 0.55) clearInterval(fade);
     }, 80);

@@ -414,9 +414,9 @@ a {
 
 .floating-music,
 .language-toggle {
-  position: absolute;
+  position: fixed;
   z-index: 5;
-  top: 22px;
+  bottom: 22px;
   border: 1px solid rgba(229,198,109,.6);
   color: var(--gold-light);
   background: rgba(67,8,18,.38);
@@ -425,6 +425,7 @@ a {
 }
 
 .floating-music {
+  position: fixed;
   left: 22px;
   width: 52px;
   height: 52px;
